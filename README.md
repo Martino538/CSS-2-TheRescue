@@ -33,3 +33,7 @@ Vandaag heb ik de nadruk gelegd op vormgeving en de structuur van mijn code.
 - Vormgeving (radio buttons)
 
 Ik heb een leuk fontje gezocht voor mijn applicatie en heb gewerkt aan een toggle button.
+
+
+### Vrijdag march 15
+Deze dag heb ik mijn voortgang besproken. Mijn plan is om volgende week te gaan werken met states. Hierdoor kan ik werken met een dacht-en-nacht modus en verschillende effecten toepassen op het vuurwerk met mijn radio buttons. Ik heb niet heel veel moeilijke dingen geleerd, maar vooral kleine dingen. Zo weet ik nu hoe ik een radio button visueel kan ombouwen naar een knop en hier een animatie aan koppel. Ook weet ik hoe ik een switch knop maak met behulp van CSS. Ik ben mij ervan bewust dat in browsers als safari een switch makkelijk gemaakt kan worden d.m.v. het html attribuut 'switch', maar aangezien dit niet door alle browsers wordt ondersteund kies ik ervoor om dit handmatig te maken.
