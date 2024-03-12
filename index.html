@@ -11,7 +11,7 @@
       <h1>Fancy Fireworks</h1>
       <div>
         <label>
-          <input type="checkbox" id="toggleModeTimeBtn" name="dayNightMode" />
+          <input type="checkbox" name="dayNightMode" value="yes"/>
           <ul>
             <li></li>
           </ul>
@@ -21,15 +21,15 @@
     <section>
       <ul>
         <li>
-          <input type="radio" id="effect1" name="effect" />
+          <input type="radio" name="effect" checked/>
           <label for="effect1"></label>
         </li>
         <li>
-          <input type="radio" id="effect2" name="effect" />
+          <input type="radio" name="effect" />
           <label for="effect2"></label>
         </li>
         <li>
-          <input type="radio" id="effect3" name="effect" />
+          <input type="radio" name="effect" />
           <label for="effect3"></label>
         </li>
       </ul>
@@ -53,6 +53,47 @@
         <input type="checkbox" id="launchFireworkBtn" name="shootFirework" />
         <label for="launchFireworkBtn">Launch!</label>
       </div>
+    </section>
+    <section>
+      <div>
+      </div>
+    </section>
+    <section>
+      <ul>
+        <li>
+          <input type="radio" name="zoom" checked/>
+          <label for="zoom1"></label>
+        </li>
+        <li>
+          <input type="radio" name="zoom" />
+          <label for="zoom2"></label>
+        </li>
+        <li>
+          <input type="radio" name="zoom" />
+          <label for="zoom3"></label>
+        </li>
+      </ul>
+    </section>
+    <section>
+      <ul>
+        <li>
+          <input type="radio" name="power" checked/>
+          <label for="power1"></label>
+        </li>
+        <li>
+          <input type="radio" name="power" />
+          <label for="power2"></label>
+        </li>
+        <li>
+          <input type="radio" name="power" />
+          <label for="power3"></label>
+        </li>
+      </ul>
+    </section>
+    <section>
+      <p>Overdag is vuurwerk niet goed zichtbaar. Maak het nacht om vuurwerk af te kunnen steken.</p>
+      <input type="checkbox" id="popup-intro" name="popup-intro">
+      <label for="popup-intro">Ik snap het</label>
     </section>
   </body>
 </html>
