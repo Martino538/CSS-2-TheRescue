@@ -750,7 +750,7 @@ body:has(section:nth-of-type(5) ul li:first-of-type input[type="radio"]:checked)
 }
 
 body:has(section:nth-of-type(5) ul li:first-of-type input[type="radio"]:checked):has(section:nth-of-type(2) input[type="checkbox"]:checked) section:nth-of-type(2) article ul li{
-  background-color: gold;
+  background-color: green;
   opacity: 0;
   animation-name: explode;
   animation-delay: 1.5s;
