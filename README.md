@@ -15,21 +15,79 @@ Ik ga maandag beginnen met het maken van het deel wat ik moeilijk vind: animatie
 
 ### Maandag march 4
 
-Bron: https://cssgradient.io/
+Vandaag heb ik een begin gemaakt aan de vormgeving. De vormgeving is een visuele ondersteuning voor hetgene wat ik wil maken en zie ik meteen wat er gebeurd met de code die ik schrijf. Dit is het resultaat van wat ik nu heb: 
+<img width="1525" alt="Scherm­afbeelding 2024-03-13 om 17 28 30" src="https://github.com/Martino538/CssFinalAssignment/assets/32341318/e4b7874e-14b3-4a8e-a984-1d61727cffe1">
 
-background: rgb(80,108,0);
-background: -moz-linear-gradient(0deg, rgba(80,108,0,1) 0%, rgba(175,217,57,1) 100%);
-background: -webkit-linear-gradient(0deg, rgba(80,108,0,1) 0%, rgba(175,217,57,1) 100%);
-background: linear-gradient(0deg, rgba(80,108,0,1) 0%, rgba(175,217,57,1) 100%);
-filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#506c00",endColorstr="#afd939",GradientType=1);
+De bron om deze gradiënts te maken is: https://cssgradient.io/
+
+`background: rgb(80,108,0);`</br>
+`background: -moz-linear-gradient(0deg, rgba(80,108,0,1) 0%, rgba(175,217,57,1) 100%);`</br>
+`background: -webkit-linear-gradient(0deg, rgba(80,108,0,1) 0%, rgba(175,217,57,1) 100%);`</br>
+`background: linear-gradient(0deg, rgba(80,108,0,1) 0%, rgba(175,217,57,1) 100%);`</br>
+
+Via [WhatCanIUse.com](https://caniuse.com/?search=linear-gradient) kwam ik erachter dat gradiënts eigenlijk goed ondersteund worden door de meeste browsers, waardoor webkit en moz niet meer nodig waren.
+
+<img width="1377" alt="Scherm­afbeelding 2024-03-13 om 17 38 41" src="https://github.com/Martino538/CssFinalAssignment/assets/32341318/fc6e8ba9-f15e-43d3-a70e-320978ea3a62">
+
+
 
 
 ### Dinsdag march 5
-Vandaag heb ik de nadruk gelegd op vormgeving en de structuur van mijn code. 
+Nu de basis van de vormgeving staat ben ik gaan werken aan de animatie. Ik heb een checkbox omgebouwd naar een normale knop, waardoor er een vuurwerkje kan worden afgeschoten.
 
-- Checkbox gemaakt waardoor balletje schiet
-- Toggle
-- Vormgeving (radio buttons)
+Om de checkbox onzichtbaar te maken heb ik de volgende code gebruikt:
+
+`Appearance: none`;
+
+Vervolgens heb ik het label gestijlt, zodat deze op de knop lijkt. Als op het label drukt kan je de state van de checkbox beïnvloeden.
+
+De daadwerkelijke animatie om het vuurwerk af te schieten bestaat uit 2 delen.
+
+Deel 1 (schiet omhoog):</br>
+`@keyframes launchFirework {`</br>
+    `  from {`</br>
+      `    transform: translate(0px, 0px);`</br>
+    `  }`</br>
+    `  to {`</br>
+      `    transform: translate(0px, -300px);`</br>
+    `  }`</br>
+  `}`</br>
+
+Deel 2 (Vuurwerk uitfaden):</br>
+`@keyframes hideLaunch {`</br>
+    `  from {`</br>
+      `    opacity: 1;`</br>
+    `  }`</br>
+    `  50% {`</br>
+      `    opacity: 1;`</br>
+    `  }`</br>
+    `  to {`</br>
+      `    opacity: 0;`</br>
+    `  }`</br>
+  `}`</br>
+
+Deel 3 (Explodeer functie):</br>
+`@keyframes explode {`</br>
+    `  from {`</br>
+      `    top: 50%;`</br>
+      `    left: 50%;`</br>
+      `    transform: translate(-50%, -50%);`</br>
+      `    opacity: 1;`</br>
+    `  }`</br>
+    `  50% {`</br>
+      `    opacity: 1;`</br>
+    `  }`</br>
+    `  to {`</br>
+      `    top: var(--explode-top, 150px);`</br>
+      `    left: var(--explode-left, 50%);`</br>
+      `    opacity: 0;`</br>
+    `  }`</br>
+  `}`</br>
+
+Met deze animaties krijg je bij elkaar dit resultaat:</br>
+![chrome-capture-2024-3-13](https://github.com/Martino538/CssFinalAssignment/assets/32341318/da1efdcf-26e0-45f5-a613-2b885f5ae6ef)
+
+Als laatste heb ik een toggle button toegevoegd om later te kunnen switchen tussen light en darkmode, radio buttons toegevoegd om de verschillende modussen aan te geven en
 
 Ik heb een leuk fontje gezocht voor mijn applicatie en heb gewerkt aan een toggle button.
 
