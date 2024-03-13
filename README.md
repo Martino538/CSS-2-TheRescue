@@ -14,7 +14,6 @@ Er zullen verschillende elementen zoals radio buttons en toggle beschikbaar zijn
 Ik ga maandag beginnen met het maken van het deel wat ik moeilijk vind: animatie. Ik ga proberen een vuurwerk animatie te maken door een 'article' van beneden naar boven te animeren. Als dit element boven is aangekomen moeten de binnenliggende 'div' tags iedere een eigen richting opschieten.
 
 ### Maandag march 4
-
 Vandaag heb ik een begin gemaakt aan de vormgeving. De vormgeving is een visuele ondersteuning voor hetgene wat ik wil maken en zie ik meteen wat er gebeurd met de code die ik schrijf. Dit is het resultaat van wat ik nu heb: 
 <img width="1525" alt="Scherm­afbeelding 2024-03-13 om 17 28 30" src="https://github.com/Martino538/CssFinalAssignment/assets/32341318/e4b7874e-14b3-4a8e-a984-1d61727cffe1">
 
@@ -87,18 +86,29 @@ Deel 3 (Explodeer functie):</br>
 Met deze animaties krijg je bij elkaar dit resultaat:</br>
 ![chrome-capture-2024-3-13](https://github.com/Martino538/CssFinalAssignment/assets/32341318/da1efdcf-26e0-45f5-a613-2b885f5ae6ef)
 
-Als laatste heb ik een toggle button toegevoegd om later te kunnen switchen tussen light en darkmode, radio buttons toegevoegd om de verschillende modussen aan te geven en
+Wat ik hier van geleerd heb is het stijlen van een checkbox. Voorheen wist ik niet dat je deze dusdanig kon stijlen zodat het op een knop leek. Hiernaast heb ik geleerd hoe je de pseuodo-class :has() kunt gebruiken. D.m.v. deze code worden zowel het schieten als de explosie animatie in gang gezet als de checkbox is aangevinkt:
 
-Ik heb een leuk fontje gezocht voor mijn applicatie en heb gewerkt aan een toggle button.
+`body:has(section:nth-of-type(2) input[type="checkbox"]:checked) section:nth-of-type(2) article`</br>
 
+`body:has(section:nth-of-type(2) input[type="checkbox"]:checked) section:nth-of-type(2) article ul li`</br>
+
+Als laatste heb ik een toggle button toegevoegd om later te kunnen switchen tussen light en darkmode, radio buttons toegevoegd om de verschillende modussen aan te geven en heb ik een een font uitgekozen die bij het stijltje past. Het resultaat ziet er nu zo uit:</br>
+<img width="1782" alt="Scherm­afbeelding 2024-03-13 om 21 01 38" src="https://github.com/Martino538/CssFinalAssignment/assets/32341318/cd3ecbf8-3493-443a-bcde-b3744bd81143">
 
 ### Vrijdag march 8
-Deze dag heb ik mijn voortgang besproken. Mijn plan is om volgende week te gaan werken met states. Hierdoor kan ik werken met een dacht-en-nacht modus en verschillende effecten toepassen op het vuurwerk met mijn radio buttons. Ik heb niet heel veel moeilijke dingen geleerd, maar vooral kleine dingen. Zo weet ik nu hoe ik een radio button visueel kan ombouwen naar een knop en hier een animatie aan koppel. Ook weet ik hoe ik een switch knop maak met behulp van CSS. Ik ben mij ervan bewust dat in browsers als safari een switch makkelijk gemaakt kan worden d.m.v. het html attribuut 'switch', maar aangezien dit niet door alle browsers wordt ondersteund kies ik ervoor om dit handmatig te maken. Volgende week ga ik mij focussen op het werken met verschillende modussen.
+Deze dag heb ik mijn voortgang besproken. Mijn plan is om volgende week te gaan werken met states. Hierdoor kan ik werken met een dag-en-nacht modus en verschillende effecten toepassen op het vuurwerk met mijn radio buttons. Ik heb niet heel veel moeilijke dingen geleerd, maar vooral kleine dingen. Zo weet ik nu hoe ik een radio button visueel kan ombouwen naar een knop en hier een animatie aan koppel. Ook weet ik hoe ik een switch knop maak met behulp van CSS. Ik ben mij ervan bewust dat in browsers als safari een switch makkelijk gemaakt kan worden d.m.v. het html attribuut 'switch', maar aangezien dit niet door alle browsers wordt ondersteund kies ik ervoor om dit handmatig te maken. Volgende week ga ik mij focussen op het werken met verschillende modussen.
 
 ### Maandag march 11
-Vandaag heb ik mij bezig gehouden met het maken van een dag-en-nacht modus. Hiernaast heb ik samen met de gastdocent ervoor gezorgd dat ik kan schakelen tussen veschillende moddussen. Dit heb ik namelijk gedaan door met :has() chaining te werken. Dit was voor mij nieuw, maar hierdoor kan ik weer extra technieken toepassen. Morgen ga ik verder met de in-en-uitzoom functie, gepaard met de kracht om vuurwerk af te schieten.
+Vandaag heb ik mij bezig gehouden met het maken van een dag-en-nacht modus. Nu deze modus gemaakt is, ga ik ervoor zorgen dat het afschieten van vuurwerk alleen mogelijk is als de nachtmodus actief is. Met andere woorden: De 'launch' knop is alleen beschikbaar als de checkbox voor dag-en-nacht modus is gecheckt. Het resultaat ziet er als volgt uit:
+
+
+Hiernaast vond ik het lastig om te kunnen switchen tussen modussen met de radio buttons. Samen met Roel heb ik dit ervoor gezorgd dat het mogelijk is om te schakelen tussen veschillende modussen vuurwerk. Dit heb ik namelijk gedaan door met :has() chaining te werken. De code ziet er als volgt uit:</br>
+
+`body:has(section:nth-of-type(1) ul li:nth-of-type(2) input[type="radio"]:checked):has(section:nth-of-type(2) input[type="checkbox"]:checked) section:nth-of-type(2) article ul li`</br>
+
+Deze manier was voor mij nieuw waardoor ik weer extra functionaliteiten kan realiseren. Morgen ga ik verder met de in-en-uitzoom functie, gepaard met de kracht om vuurwerk af te schieten.
 
 
 ### Dinsdag march 12
-Vandaag heb ik thuis gewerkt en flink wat functionaliteiten toegevoegd. Nu ik weet hoe je met modussen kunt werken d.m.v. :has() heb ik functionaliteiten voor vuurwerk toegevoegd. Zo is het nu mogelijk om met verschillende kracht de vuurpijl af te shieten. Hiernaast kan je ook in-en-uitzoomen om de vuurpijl van verschillende afstanden te bekijken en switchen tussen verschillende kleuren vuurwerk. Nu ik has beter onder de knie heb en de functionaliteiten begin te snappen vind ik de opdracht echt leuk worden. Komende dagen ga ik mij vooral richten op het refactoren van mijn code. Momenteel is er nog veel dubbele code die ik kan vervangen.
+Vandaag heb ik thuis gewerkt en flink wat functionaliteiten toegevoegd. Nu ik weet hoe je met modussen kunt werken d.m.v. :has() heb ik functionaliteiten voor vuurwerk toegevoegd. Zo is het nu mogelijk om met verschillende kracht de vuurpijl af te shieten. Hiernaast kan je ook in-en-uitzoomen om de vuurpijl van verschillende afstanden te bekijken en switchen tussen verschillende kleuren vuurwerk. Nu ik has beter onder de knie heb en de functionaliteiten begin te snappen vind ik de opdracht echt leuk worden. Komende dagen ga ik mij vooral richten op het refactoren van mijn code. Momenteel is er nog veel dubbele code die ik kan vervangen. Gradients aangepast.
 
