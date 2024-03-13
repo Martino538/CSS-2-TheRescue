@@ -11,26 +11,44 @@
   font-display: swap;
 }
 
+/* Done with https://stackoverflow.com/questions/6542212/use-css3-transitions-with-gradient-backgrounds/63848864#63848864 */
+
+@property --skyColor1 {
+  syntax: '<color>';
+  initial-value: rgb(163, 222, 251);
+  inherits: false;
+}
+
+@property --skyColor2 {
+  syntax: '<color>';
+  initial-value: rgb(207, 235, 249);
+  inherits: false;
+}
+
+@property --groundColor1 {
+  syntax: '<color>';
+  initial-value: rgb(92, 157, 13);
+  inherits: false;
+}
+
+@property --groundColor2 {
+  syntax: '<color>';
+  initial-value: rgb(175, 217, 57);
+  inherits: false;
+}
+
 body {
   margin: 0;
   padding: 0;
   position: relative;
-  background: linear-gradient(
-    0deg,
-    rgba(163, 222, 251, 1) 0%,
-    rgba(207, 235, 249, 1) 100%
-  );
   font-family: "Open Sans", sans-serif;
+  background: linear-gradient(var(--skyColor1), var(--skyColor2));
+  transition: --skyColor1 1s, --skyColor2 1s;
 }
 
 body:has(article div input[type="checkbox"]:checked) {
-  background: linear-gradient(
-    0deg,
-    rgba(30, 100, 151, 1) 0%,
-    rgba(17, 56, 85, 1) 60%,
-    rgba(0, 0, 0, 1) 100%
-  );
-  /* background-color: red; */
+  --skyColor1: rgb(0, 0, 0, 1);
+  --skyColor2: rgb(30, 100, 151);
 }
 
 body > article {
@@ -121,18 +139,25 @@ body > article div input[type="checkbox"]:checked ~ ul li {
 }
 
 body section:nth-of-type(2) div:last-of-type {
-  background: linear-gradient(
+  /* background: linear-gradient(
     0deg,
     rgba(92, 157, 13, 1) 0%,
     rgba(132, 186, 34, 1) 67%,
     rgba(175, 217, 57, 1) 100%
-  );
+  ); */
+  background: linear-gradient(var(--groundColor1), var(--groundColor2));
+  transition: --groundColor1 1s, --groundColor2 1s, .3s ease-in-out;
   height: 25vh;
   width: 100%;
   border-radius: 150% 150% 50% 60% / 150% 150% 0% 0%;
   position: absolute;
   bottom: 0;
-  transition: .3s ease-in-out;
+}
+
+body:has(article div input[type="checkbox"]:checked) section:nth-of-type(2) div:last-of-type {
+  /* background: linear-gradient(187deg, rgba(8,115,94,1) 0%, rgba(3,68,86,1) 60%, rgba(0,40,81,1) 100%); */
+  --groundColor1: rgb(8, 115, 94);
+  --groundColor2: rgb(0, 40, 81);
 }
 
 body section:nth-of-type(2) input[type="checkbox"],
@@ -272,7 +297,6 @@ body:has(section:nth-of-type(1) ul li input[type="radio"]:checked):has(section:n
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: url('../img/firework.svg');
   border-radius: 50%;
   animation: launchFirework 1s;
   animation-duration: 1s;
@@ -286,11 +310,11 @@ body:has(section:nth-of-type(1) ul li input[type="radio"]:checked):has(section:n
 
 @keyframes launchFirework {
   from {
-    transform: translate(0px, 0px) rotate(-45deg);
+    transform: translate(0px, 0px);
   }
 
   to {
-    transform: translate(0px, -300px) rotate(-45deg);
+    transform: translate(0px, -300px);
   }
 }
 
@@ -359,10 +383,10 @@ body:has(section:nth-of-type(1) ul li:nth-of-type(2) input[type="radio"]:checked
 
 @keyframes explode {
   from {
-    top: 25%;
-    left: 75%;
-    transform: translate(-25%, -75%);
-    opacity: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-55%, -55%);
+    opacity: 1;
   }
 
   90% {
@@ -743,20 +767,21 @@ section:nth-of-type(5) ul li:last-of-type input[type="radio"]:before {
 body:has(section:nth-of-type(5) ul li:first-of-type input[type="radio"]:checked):has(section:nth-of-type(2) input[type="checkbox"]:checked) section:nth-of-type(2) article {
   animation-name: launchFirework, hideLaunch;
   animation-delay: 0s, 1.7s;
-  animation-duration: 1.5s, 0.7s;
+  animation-duration: 1.5s, 1.5s;
   animation-fill-mode: forwards;
   transition-timing-function: ease-out;
   transform: translate(0px, 0px) rotate(-45deg);
+  z-index: -1;
 }
 
 body:has(section:nth-of-type(5) ul li:first-of-type input[type="radio"]:checked):has(section:nth-of-type(2) input[type="checkbox"]:checked) section:nth-of-type(2) article ul li{
   background-color: green;
-  opacity: 0;
   animation-name: explode;
   animation-delay: 1.5s;
-  animation-duration: 1s;
+  animation-duration: 1.5s;
   animation-fill-mode: forwards;
   transition-timing-function: ease-in-out;
+  z-index: -1;
 }
 
 /* Vuurwerk - Power 2 */
@@ -764,7 +789,7 @@ body:has(section:nth-of-type(5) ul li:first-of-type input[type="radio"]:checked)
 body:has(section:nth-of-type(5) ul li:nth-of-type(2) input[type="radio"]:checked):has(section:nth-of-type(2) input[type="checkbox"]:checked) section:nth-of-type(2) article {
   animation-name: firePower2, hideLaunch;
   animation-delay: 0s, 1.7s;
-  animation-duration: 1.5s, 0.7s;
+  animation-duration: 1.5s, 1.5s;
   animation-fill-mode: forwards;
   transition-timing-function: ease-out;
   transform: translate(0px, 0px) rotate(-45deg);
@@ -775,7 +800,7 @@ body:has(section:nth-of-type(5) ul li:nth-of-type(2) input[type="radio"]:checked
 body:has(section:nth-of-type(5) ul li:nth-of-type(3) input[type="radio"]:checked):has(section:nth-of-type(2) input[type="checkbox"]:checked) section:nth-of-type(2) article {
   animation-name: firePower3, hideLaunch;
   animation-delay: 0s, 1.7s;
-  animation-duration: 1.5s, 0.7s;
+  animation-duration: 1.5s, 1.5s;
   animation-fill-mode: forwards;
   transition-timing-function: ease-out;
 }
@@ -784,30 +809,27 @@ body:has(section:nth-of-type(5) ul li:nth-of-type(3) input[type="radio"]:checked
 
 body:has(section:nth-of-type(1) ul li:nth-of-type(1) input[type="radio"]:checked):has(section:nth-of-type(2) input[type="checkbox"]:checked) section:nth-of-type(2) article ul li{
   background-color: gold;
-  opacity: 0;
   animation-name: explode;
   animation-delay: 1.5s;
-  animation-duration: 1s;
+  animation-duration: 1.5s;
   animation-fill-mode: forwards;
   transition-timing-function: ease-in-out;
 }
 
 body:has(section:nth-of-type(1) ul li:nth-of-type(2) input[type="radio"]:checked):has(section:nth-of-type(2) input[type="checkbox"]:checked) section:nth-of-type(2) article ul li{
-  background-color: purple;
-  opacity: 0;
+  background-color: magenta;
   animation-name: explode;
   animation-delay: 1.5s;
-  animation-duration: 1s;
+  animation-duration: 1.5s;
   animation-fill-mode: forwards;
   transition-timing-function: ease-in-out;
 }
 
 body:has(section:nth-of-type(1) ul li:nth-of-type(3) input[type="radio"]:checked):has(section:nth-of-type(2) input[type="checkbox"]:checked) section:nth-of-type(2) article ul li{
-  background-color: blue;
-  opacity: 0;
+  background-color: cyan;
   animation-name: explode;
   animation-delay: 1.5s;
-  animation-duration: 1s;
+  animation-duration: 1.5s;
   animation-fill-mode: forwards;
   transition-timing-function: ease-in-out;
 }
