@@ -1,3 +1,6 @@
+![Banner-fireworks](https://github.com/Martino538/CssFinalAssignment/assets/32341318/1137ad7c-6917-434f-88d5-2d957df52f34)
+
+
 # Proces report
 ## Week 1
 ### Donderdag feb 27
@@ -8,6 +11,8 @@ Er zullen verschillende elementen zoals radio buttons en toggle beschikbaar zijn
 - Met de toggle kan je schakelen tussen dag en nacht modus. In dag modus kan het vuurwerk niet worden afgevuurd.
 - Er zijn knoppen aanwezig waarmee de hoogte van het vuurwerk kan worden ingesteld.
 - Er zijn knoppen aanwezig waarmee kan worden in-en-uitgezoomt.
+
+<img width="1020" alt="Scherm­afbeelding 2024-03-14 om 09 34 37" src="https://github.com/Martino538/CssFinalAssignment/assets/32341318/4c7f1640-66aa-40aa-863f-23b667990bf6">
 
 
 ### Vrijdag march 1
