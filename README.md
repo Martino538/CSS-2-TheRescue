@@ -1,7 +1,7 @@
 ![Banner-fireworks](https://github.com/Martino538/CssFinalAssignment/assets/32341318/1137ad7c-6917-434f-88d5-2d957df52f34)
 
 
-# Proces report
+# Proces verslag
 ## Week 1
 ### Donderdag feb 27
 Vandaag heb ik een schets gemaakt van mijn idee. Het is een combinatie tussen het onderwerp vuurwerk en een control panel. 
