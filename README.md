@@ -115,5 +115,18 @@ Deze manier was voor mij nieuw waardoor ik weer extra functionaliteiten kan real
 
 
 ### Dinsdag march 12
-Vandaag heb ik thuis gewerkt en flink wat functionaliteiten toegevoegd. Nu ik weet hoe je met modussen kunt werken d.m.v. :has() heb ik functionaliteiten voor vuurwerk toegevoegd. Zo is het nu mogelijk om met verschillende kracht de vuurpijl af te shieten. Hiernaast kan je ook in-en-uitzoomen om de vuurpijl van verschillende afstanden te bekijken en switchen tussen verschillende kleuren vuurwerk. Nu ik has beter onder de knie heb en de functionaliteiten begin te snappen vind ik de opdracht echt leuk worden. Komende dagen ga ik mij vooral richten op het refactoren van mijn code. Momenteel is er nog veel dubbele code die ik kan vervangen. Gradients aangepast.
+Vandaag heb ik thuis gewerkt en flink wat functionaliteiten toegevoegd. Nu ik weet hoe je met modussen kunt werken d.m.v. :has() heb ik functionaliteiten voor vuurwerk toegevoegd. Zo is het nu mogelijk om met verschillende kracht de vuurpijl af te shieten. Hiernaast kan je ook in-en-uitzoomen om de vuurpijl van verschillende afstanden te bekijken en switchen tussen verschillende kleuren vuurwerk. Als laatste heb ik een pop-up toegevoegd die aangeeft dat je overdag geen vuurwerk kunt afsteken. Tot de pop-up is aangeklikt kan er geen interactie met de interface plaatsvinden. Nu ik :has() beter onder de knie heb en de functionaliteiten begin te snappen vind ik de opdracht echt leuk worden. Hiernaast heb ik ook uitgevogeld hoe je een transition op gradiënts kunt zetten. Dit doe je d.m.v. custom properties in CSS:</br>
+
+De layout ziet er nu als volgt uit.
+<img width="1784" alt="Scherm­afbeelding 2024-03-15 om 09 39 07" src="https://github.com/Martino538/CssFinalAssignment/assets/32341318/096a4d9d-406c-472d-acd7-4ec9a2c54304"></br>
+<img width="1779" alt="Scherm­afbeelding 2024-03-15 om 09 37 01" src="https://github.com/Martino538/CssFinalAssignment/assets/32341318/b2470c16-20ce-4cc7-9ac8-2ec62de1f89d"></br>
+
+
+`@property --groundColor2 {`</br>
+  `    syntax: '<color>';`</br>
+  `    initial-value: rgb(175, 217, 57);`</br>
+  `    inherits: false;`</br>
+`}`</br>
+
+Komende dagen ga ik mij vooral richten op het refactoren van mijn code. Momenteel is er nog veel dubbele code die ik kan vervangen. 
 
