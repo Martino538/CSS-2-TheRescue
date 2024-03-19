@@ -18,6 +18,8 @@ Er zullen verschillende elementen zoals radio buttons en toggle beschikbaar zijn
 ### Vrijdag march 1
 Ik ga maandag beginnen met het maken van het deel wat ik moeilijk vind: animatie. Ik ga proberen een vuurwerk animatie te maken door een 'article' van beneden naar boven te animeren. Als dit element boven is aangekomen moeten de binnenliggende 'div' tags iedere een eigen richting opschieten.
 
+## Week 2
+
 ### Maandag march 4
 Vandaag heb ik een begin gemaakt aan de vormgeving. De vormgeving is een visuele ondersteuning voor hetgene wat ik wil maken en zie ik meteen wat er gebeurd met de code die ik schrijf. Dit is het resultaat van wat ik nu heb: 
 <img width="1525" alt="Scherm­afbeelding 2024-03-13 om 17 28 30" src="https://github.com/Martino538/CssFinalAssignment/assets/32341318/e4b7874e-14b3-4a8e-a984-1d61727cffe1">
@@ -103,6 +105,8 @@ Als laatste heb ik een toggle button toegevoegd om later te kunnen switchen tuss
 ### Vrijdag march 8
 Deze dag heb ik mijn voortgang besproken. Mijn plan is om volgende week te gaan werken met states. Hierdoor kan ik werken met een dag-en-nacht modus en verschillende effecten toepassen op het vuurwerk met mijn radio buttons. Ik heb niet heel veel moeilijke dingen geleerd, maar vooral kleine dingen. Zo weet ik nu hoe ik een radio button visueel kan ombouwen naar een knop en hier een animatie aan koppel. Ook weet ik hoe ik een switch knop maak met behulp van CSS. Ik ben mij ervan bewust dat in browsers als safari een switch makkelijk gemaakt kan worden d.m.v. het html attribuut 'switch', maar aangezien dit niet door alle browsers wordt ondersteund kies ik ervoor om dit handmatig te maken. Volgende week ga ik mij focussen op het werken met verschillende modussen.
 
+## Week 3
+
 ### Maandag march 11
 Vandaag heb ik mij bezig gehouden met het maken van een dag-en-nacht modus. Nu deze modus gemaakt is, ga ik ervoor zorgen dat het afschieten van vuurwerk alleen mogelijk is als de nachtmodus actief is. Met andere woorden: De 'launch' knop is alleen beschikbaar als de checkbox voor dag-en-nacht modus is gecheckt. Het resultaat ziet er als volgt uit:
 
@@ -128,5 +132,43 @@ De layout ziet er nu als volgt uit.
   `    inherits: false;`</br>
 `}`</br>
 
+
+### Vrijdag 15 maart
 Komende dagen ga ik mij vooral richten op het refactoren van mijn code. Momenteel is er nog veel dubbele code die ik kan vervangen. 
 
+## Week 4
+### Maandag 18 maart
+Deze dag was ik ziek. Maar ondanks dat heb ik thuis doorgewerkt. Ik heb verschillende vuurwerk modussen toegevoegd. Nu is het mogelijk om vuurwerk in de vorm van een hartje en een ster af te schieten. Deze functionaliteiten had ik eigenlijk eerder deze week al gemaakt, maar hoef ik nu alleen om te bouwen. Het resultaat is als volgt: 
+
+
+Modussen toegevoegd. Animatie in titel en responsive gemaakt.
+
+### Dinsdag 19 maart
+Vandaag heb ik een container query gemaakt om verschillende styling modussen toe te passen. Dit was nieuw voor mij en nuttig om hier meer van te weten. D.m.v. een custom CSS property kan ik een 'Nachtmodus' inschakelen. Als deze is ingeschakeld kan ik elementen verschillende styling meesturen. Het gebruik van een container query vervangt het gebruik van :has() bij het omzetten naar een dark mode. Hierdoor krijg je gestructureerde code waarin alle opties bij een dark mode bij elkaar staan. De code is hieronder te zien:
+
+`html:has(input[name="dayNightMode"]:checked) {`</br>
+  `--dayAndNight: night;`</br>
+`}`</br>
+
+`@container style(--dayAndNight:night) {`</br>
+`  body {`</br>
+  `  --skyColor1: rgb(0, 0, 0, 1);`</br>
+  `  --skyColor2: rgb(30, 100, 151);`</br>
+  `}`</br>
+
+  `body section:nth-of-type(2) div:last-of-type label {`</br>
+    `border-color: var(--red);`</br>
+    `color: var(--red);`</br>
+    `pointer-events: all;`</br>
+    `border-radius: 10px;`</br>
+  `}`</br>
+  
+  `body section:nth-of-type(2) div:last-of-type label:hover {`</br>
+    `color: var(--white);`
+  `}`</br>
+`}`</br>
+
+Hiernaast heb ik de code gelegd op het refactoren van mijn code. Ik heb een kleurenschema aangemaakt waarin alle kleuren in mijn applicatie worden gebruikt zijn gedefinieerd:
+
+
+Daarnaast heb ik ook voor het eerst CSS nesting toegepast. Dit vind ik erg fijn werken omdat het de code veel makkelijker leesbaar en geordend houd. Dit ga ik in de toekomst veel vaker toepassen in mijn projecten.

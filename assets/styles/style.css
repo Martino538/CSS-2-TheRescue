@@ -1383,7 +1383,7 @@ html:has(input[name="dayNightMode"]:checked) {
   --dayAndNight: night;
 }
 
-@container style(--dayAndNight: night) {
+@container style(--dayAndNight:night) {
   body {
     --skyColor1: rgb(0, 0, 0, 1);
     --skyColor2: rgb(30, 100, 151);
