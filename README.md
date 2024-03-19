@@ -157,14 +157,14 @@ Vandaag heb ik een container query gemaakt om verschillende styling modussen toe
   `}`</br>
 
   `body section:nth-of-type(2) div:last-of-type label {`</br>
-    `border-color: var(--red);`</br>
-    `color: var(--red);`</br>
-    `pointer-events: all;`</br>
-    `border-radius: 10px;`</br>
+    `    border-color: var(--red);`</br>
+    `    color: var(--red);`</br>
+    `    pointer-events: all;`</br>
+    `    border-radius: 10px;`</br>
   `}`</br>
   
   `body section:nth-of-type(2) div:last-of-type label:hover {`</br>
-    `color: var(--white);`
+    `    color: var(--white);`
   `}`</br>
 `}`</br>
 
