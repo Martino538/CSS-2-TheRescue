@@ -138,10 +138,25 @@ Komende dagen ga ik mij vooral richten op het refactoren van mijn code. Momentee
 
 ## Week 4
 ### Maandag 18 maart
-Deze dag was ik ziek. Maar ondanks dat heb ik thuis doorgewerkt. Ik heb verschillende vuurwerk modussen toegevoegd. Nu is het mogelijk om vuurwerk in de vorm van een hartje en een ster af te schieten. Deze functionaliteiten had ik eigenlijk eerder deze week al gemaakt, maar hoef ik nu alleen om te bouwen. Het resultaat is als volgt: 
+Deze dag was ik ziek. Maar ondanks dat heb ik thuis doorgewerkt. Ik heb verschillende vuurwerk modussen toegevoegd. Nu is het mogelijk om vuurwerk in de vorm van een hartje en een ster af te schieten. Deze functionaliteiten had ik eigenlijk eerder deze week al gemaakt, maar hoef ik nu alleen om te bouwen. Het resultaat is als volgt:</br>
+
+Het hart: </br>
+![Heart](https://github.com/Martino538/CssFinalAssignment/assets/32341318/9093516d-2589-4c46-93db-d07bcdf85981)</br>
+
+De ster: </br>
+![Star](https://github.com/Martino538/CssFinalAssignment/assets/32341318/c9b2b9c8-342f-4440-94c4-e97c8ff04e5f)</br>
 
 
-Modussen toegevoegd. Animatie in titel en responsive gemaakt.
+Hiernaast heb ik een animatie in de titel toegevoegd. Als de applicatie voor het eerst laad en er op de knop in de popup wordt gedrukt komt de letter F aanvliegen met een vuurpijl. .en responsive gemaakt.</br>
+![Title-animation](https://github.com/Martino538/CssFinalAssignment/assets/32341318/120f2e55-3b4e-4312-a15a-c8e92082e23f)
+
+Als laatste heb ik nog een kleine animatie toegevoegd dat als je 1x bent ingezoomed, maar op kracht x3 schiet, je een letter uit de titel naar de maan schiet:</br>
+![Letter-launch](https://github.com/Martino538/CssFinalAssignment/assets/32341318/bb704769-2806-4c47-877b-69a3126b77bb)
+
+Nu alle functionaliteiten staan heb ik de applicatie responsive gemaakt, zodat het op mobiel ook toegankgelijk is.</br>
+<img width="420" alt="Scherm­afbeelding 2024-03-19 om 16 15 19" src="https://github.com/Martino538/CssFinalAssignment/assets/32341318/cd97716b-ba21-4955-b5ac-b49eb5064ffe">
+<img width="421" alt="Scherm­afbeelding 2024-03-19 om 16 15 51" src="https://github.com/Martino538/CssFinalAssignment/assets/32341318/80f5d56a-726f-462c-b78e-9a088cb22f0c">
+
 
 ### Dinsdag 19 maart
 Vandaag heb ik een container query gemaakt om verschillende styling modussen toe te passen. Dit was nieuw voor mij en nuttig om hier meer van te weten. D.m.v. een custom CSS property kan ik een 'Nachtmodus' inschakelen. Als deze is ingeschakeld kan ik elementen verschillende styling meesturen. Het gebruik van een container query vervangt het gebruik van :has() bij het omzetten naar een dark mode. Hierdoor krijg je gestructureerde code waarin alle opties bij een dark mode bij elkaar staan. De code is hieronder te zien:
@@ -168,7 +183,7 @@ Vandaag heb ik een container query gemaakt om verschillende styling modussen toe
   `}`</br>
 `}`</br>
 
-Hiernaast heb ik de code gelegd op het refactoren van mijn code. Ik heb een kleurenschema aangemaakt waarin alle kleuren in mijn applicatie worden gebruikt zijn gedefinieerd:
-
+Hiernaast heb ik de code gelegd op het refactoren van mijn code. Ik heb een kleurenschema aangemaakt waarin alle kleuren in mijn applicatie worden gebruikt zijn gedefinieerd:</br>
+<img width="444" alt="Scherm­afbeelding 2024-03-19 om 15 38 33" src="https://github.com/Martino538/CssFinalAssignment/assets/32341318/73fc0240-5a9c-4ad0-910a-94849edd3369">
 
 Daarnaast heb ik ook voor het eerst CSS nesting toegepast. Dit vind ik erg fijn werken omdat het de code veel makkelijker leesbaar en geordend houd. Dit ga ik in de toekomst veel vaker toepassen in mijn projecten.
