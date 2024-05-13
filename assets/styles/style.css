@@ -2,11 +2,11 @@
 
 @font-face {
   font-family: "Helsky";
-  src: url("/assets/fonts/Helsky-Regular.eot");
-  src: url("/assets/fonts/Helsky-Regular.eot?#iefix") format("embedded-opentype"),
-    url("/assets/fonts/Helsky-Regular.woff2") format("woff2"),
-    url("/assets/fonts/Helsky-Regular.woff") format("woff"),
-    url("/assets/fonts/Helsky-Regular.ttf") format("truetype");
+  src: url("../../assets/fonts/Helsky-Regular.eot");
+  src: url("../../assets/fonts/Helsky-Regular.eot?#iefix") format("embedded-opentype"),
+    url("../../assets/fonts/Helsky-Regular.woff2") format("woff2"),
+    url("../../assets/fonts/Helsky-Regular.woff") format("woff"),
+    url("../../assets/fonts/Helsky-Regular.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
