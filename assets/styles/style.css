@@ -319,14 +319,14 @@ body > article {
   }
 }
 
-/* body > article div input[type="checkbox"]:checked ~ ul {
+body > article div input[type="checkbox"]:checked ~ ul {
   background-color: var(--blueGray);
 }
 
 body > article div input[type="checkbox"]:checked ~ ul li {
   box-shadow: inset 0px 0px 0px 0.75em var(--white);
   transform: translate(33px, 3px);
-} */
+}
 
 /* End of toggle button */
 
@@ -416,6 +416,14 @@ body section:nth-of-type(2) {
       }
     }
   }
+}
+
+body:has(section:nth-of-type(2) input[type="checkbox"]:checked) section:nth-of-type(2) div label::before {
+  content: 'Reload!';
+}
+
+body:has(section:nth-of-type(2) input[type="checkbox"]) section:nth-of-type(2) div label::before {
+  content: 'Fire!';
 }
 
 body:has(article div input[type="checkbox"]:checked) section:nth-of-type(2) div:last-of-type {
